@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://3nrxoxf6g5yp"]
+
+[ext_resource type="Script" uid="uid://cta6w2bxvg1id" path="res://game/Game.cs" id="1_qdja7"]
+[ext_resource type="Script" uid="uid://crv6noli23hrm" path="res://ui/HudLayer.cs" id="3_adwu5"]
+[ext_resource type="Script" uid="uid://bs2bx4226t0x8" path="res://game/MenuLayer.cs" id="4_knu3h"]
+[ext_resource type="Script" uid="uid://mg4jqvvcq3w" path="res://ui/PauseLayer.cs" id="5_1vmna"]
+[ext_resource type="PackedScene" uid="uid://dtr64c8cm48vm" path="res://stage.tscn" id="5_knu3h"]
+[ext_resource type="PackedScene" uid="uid://gqit3q11t75a" path="res://ui/dialog_layer.tscn" id="5_wmqhs"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_qdja7")
+metadata/_edit_vertical_guides_ = [-293.0]
+
+[node name="HudLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_adwu5")
+
+[node name="MenuLayer" type="CanvasLayer" parent="."]
+script = ExtResource("4_knu3h")
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+script = ExtResource("5_1vmna")
+
+[node name="DialogLayer" parent="." instance=ExtResource("5_wmqhs")]
+
+[node name="Stage" parent="." instance=ExtResource("5_knu3h")]
