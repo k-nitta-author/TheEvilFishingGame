@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c30mdcbejjrhw"]
+
+[ext_resource type="PackedScene" uid="uid://dtr64c8cm48vm" path="res://stages/stage.tscn" id="1_s507r"]
+[ext_resource type="Texture2D" uid="uid://dmib0c8gji6ae" path="res://assets/a1shack.png" id="2_2d1ah"]
+[ext_resource type="PackedScene" uid="uid://dip3aub1k3wge" path="res://props/StageExit.tscn" id="3_1liic"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1liic"]
+a = Vector2(-38, 286)
+b = Vector2(-162, 286)
+
+[node name="a1_shack" instance=ExtResource("1_s507r")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_2d1ah")
+
+[node name="StageExit" parent="." index="2" instance=ExtResource("3_1liic")]
+DestinationFilePath = "uid://coi726kci5s5n"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StageExit" index="0"]
+position = Vector2(94, 54)
+shape = SubResource("SegmentShape2D_1liic")
