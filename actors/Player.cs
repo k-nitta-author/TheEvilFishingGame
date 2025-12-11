@@ -6,23 +6,17 @@ using Actor;
 namespace Actor
 {
 
-    public partial class Player : Actor 
+    public partial class Player : Actor
     {
-        Vector2 direction;
-
-        [Export]
-        float max_speed;
-
-        private float speed;
-
 
         public override void _Ready()
         {
             base._Ready();
 
-            this.speed = this.max_speed;
+            this.CurrentState = new WalkingState();
+            this.CurrentState.Enter(this);
 
-            this.game.EventBus.RegisterSubscriber(this);
+            //this.game.EventBus.RegisterSubscriber(this);
 
         }
 
@@ -30,11 +24,7 @@ namespace Actor
         public override void _PhysicsProcess(double delta)
         {
             
-            this.direction = new Vector2(Input.GetAxis("ui_left", "ui_right"), Input.GetAxis("ui_up", "ui_down")).Normalized();
-
-            this.Velocity = this.direction * this.speed;
-
-            this.MoveAndSlide();
+            this.CurrentState.Execute();
 
         }
 
