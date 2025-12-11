@@ -5,6 +5,6 @@ namespace Event
 {
     public interface IEventPublisher
     {
-        void Publish(IEvent e);
+        void Publish();
     }    
 }
