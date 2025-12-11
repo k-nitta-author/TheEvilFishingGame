@@ -1,25 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://3nrxoxf6g5yp"]
+[gd_scene load_steps=9 format=3 uid="uid://3nrxoxf6g5yp"]
 
 [ext_resource type="Script" uid="uid://cta6w2bxvg1id" path="res://game/Game.cs" id="1_qdja7"]
-[ext_resource type="Script" uid="uid://crv6noli23hrm" path="res://ui/HudLayer.cs" id="3_adwu5"]
-[ext_resource type="Script" uid="uid://bs2bx4226t0x8" path="res://game/MenuLayer.cs" id="4_knu3h"]
-[ext_resource type="Script" uid="uid://mg4jqvvcq3w" path="res://ui/PauseLayer.cs" id="5_1vmna"]
-[ext_resource type="PackedScene" uid="uid://dtr64c8cm48vm" path="res://stage.tscn" id="5_knu3h"]
+[ext_resource type="Script" uid="uid://d2lejgja5844b" path="res://ui/UILayer.cs" id="3_1vmna"]
+[ext_resource type="PackedScene" uid="uid://b5mi1lxnq8o67" path="res://ui/hud_layer.tscn" id="4_1vmna"]
+[ext_resource type="PackedScene" uid="uid://b1t31ngirlmow" path="res://ui/menu_layer.tscn" id="5_4yavt"]
 [ext_resource type="PackedScene" uid="uid://gqit3q11t75a" path="res://ui/dialog_layer.tscn" id="5_wmqhs"]
+[ext_resource type="PackedScene" uid="uid://dambeu2te8i0b" path="res://ui/pause_layer.tscn" id="6_wmqhs"]
+[ext_resource type="PackedScene" uid="uid://dr4ktobse77ew" path="res://ui/textbox_layer.tscn" id="8_4yavt"]
+[ext_resource type="PackedScene" uid="uid://c30mdcbejjrhw" path="res://stages/a1_shack.tscn" id="8_wmqhs"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_qdja7")
 metadata/_edit_vertical_guides_ = [-293.0]
 
-[node name="HudLayer" type="CanvasLayer" parent="."]
-script = ExtResource("3_adwu5")
+[node name="UILayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_1vmna")
 
-[node name="MenuLayer" type="CanvasLayer" parent="."]
-script = ExtResource("4_knu3h")
+[node name="HudLayer" parent="UILayer" instance=ExtResource("4_1vmna")]
 
-[node name="PauseLayer" type="CanvasLayer" parent="."]
-script = ExtResource("5_1vmna")
+[node name="MenuLayer" parent="UILayer" instance=ExtResource("5_4yavt")]
 
-[node name="DialogLayer" parent="." instance=ExtResource("5_wmqhs")]
+[node name="PauseLayer" parent="UILayer" instance=ExtResource("6_wmqhs")]
 
-[node name="Stage" parent="." instance=ExtResource("5_knu3h")]
+[node name="DialogLayer" parent="UILayer" instance=ExtResource("5_wmqhs")]
+
+[node name="TextboxLayer" parent="UILayer" instance=ExtResource("8_4yavt")]
+
+[node name="a1_shack" parent="." instance=ExtResource("8_wmqhs")]
