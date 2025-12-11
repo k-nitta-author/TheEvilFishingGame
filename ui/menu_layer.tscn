@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1t31ngirlmow"]
+
+[ext_resource type="Script" uid="uid://bs2bx4226t0x8" path="res://game/MenuLayer.cs" id="1_u0fh4"]
+
+[node name="MenuLayer" type="CanvasLayer"]
+script = ExtResource("1_u0fh4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nv8418n610uq"]
 
 [ext_resource type="Script" uid="uid://djsdjkigk3235" path="res://ui/Credits.cs" id="1_en1n2"]
-[ext_resource type="Texture2D" uid="uid://clr5gqlph351h" path="res://pexels-joerg-mangelsen-337913024-28993671.jpg" id="2_ogi12"]
+[ext_resource type="Texture2D" uid="uid://clr5gqlph351h" path="res://assets/pexels-joerg-mangelsen-337913024-28993671.jpg" id="2_ogi12"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3

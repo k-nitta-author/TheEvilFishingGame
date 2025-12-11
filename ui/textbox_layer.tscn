@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr4ktobse77ew"]
+
+[ext_resource type="Script" uid="uid://44gutidihyqc" path="res://ui/TextboxLayer.cs" id="1_3bax4"]
+[ext_resource type="PackedScene" uid="uid://kp70ko7w1fxh" path="res://ui/DialogBox/dialog_box.tscn" id="2_y4ylc"]
+
+[node name="TextboxLayer" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_3bax4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="DialogBox" parent="Control" instance=ExtResource("2_y4ylc")]
+layout_mode = 1
