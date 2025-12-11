@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dip3aub1k3wge"]
+
+[ext_resource type="Script" uid="uid://bfvpxe86lob3b" path="res://stages/StageExit.cs" id="1_1elni"]
+
+[node name="StageExit" type="Area2D"]
+script = ExtResource("1_1elni")
