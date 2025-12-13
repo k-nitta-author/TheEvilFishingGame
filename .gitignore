@@ -8,6 +8,9 @@
 # Ignore assets directory
 assets/
 
+# Ignore Data Directory
+data/
+
 # Ignore in development Asset Files
 *.xcf
 *.psd
