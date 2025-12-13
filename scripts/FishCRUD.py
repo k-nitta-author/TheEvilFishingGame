@@ -7,7 +7,7 @@ import uuid
 DATA_DIRECTORY = ""
 dirname = os.path.abspath("../data")
 
-
+# Static Fish Class 
 class Fish():
 
     # TODO: Implement
@@ -18,7 +18,7 @@ class Fish():
     def create_fish() -> str:
         
         fish_data = {
-            "id": "", # USE UUID 
+            "id": str(uuid.uuid4()), 
             "name": input("Input Fish Name: "),
             "strength": int(input("Input Fish Str: ")),
             "speed": int(input("Input Fish Speed: ")),

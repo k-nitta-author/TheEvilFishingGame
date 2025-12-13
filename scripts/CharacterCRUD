@@ -1,0 +1,38 @@
+import csv
+import json
+import sqlite3
+import uuid
+import os.path as path
+
+# static class for handling CRUD operations on Dialog Data
+class Character:
+    
+    def create() -> str:
+        pass
+
+    def read() -> str:
+        pass
+
+    def update() -> str:
+        pass
+
+    def delete() -> str:
+        pass
+
+def parse_input(i: int):
+
+    commands_dict = {
+        1: Character.create,
+        2: Character.read,
+        3: Character.update,
+        4: Character.delete,
+        9: exit
+    }
+
+    return commands_dict[i]
+
+if __name__ == "__main__":
+    
+    while True:
+        pass
+
