@@ -13,6 +13,8 @@
 script = ExtResource("1_qdja7")
 metadata/_edit_vertical_guides_ = [-293.0]
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
 [node name="UILayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_1vmna")
 
